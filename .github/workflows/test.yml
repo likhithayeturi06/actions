@@ -10,3 +10,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+  deploy:
+    runs-on: windows-2022
+    steps:
+      - name: testing jobs
+        run : echo "tetsing jobs"
