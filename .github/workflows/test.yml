@@ -15,3 +15,13 @@ jobs:
     steps:
       - name: testing jobs
         run : echo "tetsing jobs"
+  testing:
+    needs: deploy
+    runs-on: windows-2022
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name : Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
