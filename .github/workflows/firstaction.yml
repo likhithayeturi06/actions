@@ -1,0 +1,11 @@
+name: First workflow
+on: workflow_dispatch
+jobs:
+  first_job:
+    runs-on: windows-2022
+    steps:
+      - name: firststep
+        run: echo "hello"
+      - name: secondstep
+        run: echo "bye"
+      
