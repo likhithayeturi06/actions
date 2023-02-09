@@ -2,7 +2,7 @@ name: workflow output
 on: workflow_dispatch
 jobs:
   info:
-  runs-on:windows-2022
-    steps:
-      -name: github context
-       run: echo "{{ toJSON(github)}}"
+  runs-on : windows-2022
+  steps:
+    - name: github context
+      run: echo "{{ toJSON(github)}}"
