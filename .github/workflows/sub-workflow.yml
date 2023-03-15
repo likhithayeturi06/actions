@@ -1,0 +1,20 @@
+name: Sub Workflow
+
+on: 
+  workflow_call:
+    inputs:
+      release_type:
+        type: string
+        required: true
+      some_other_value:
+        type: string
+        required: true
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Inputs
+        run: |
+          echo "Release Type: ${{ inputs.release_type }}"
+          echo "Release Type: ${{ inputs.some_other_value }}"
